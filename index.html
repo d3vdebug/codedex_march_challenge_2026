@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeDex March Challenge 2026 Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background: url('Assets/BG.jpg') center/cover fixed;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        body.modal-open .container {
+            filter: blur(5px);
+            transition: filter 0.3s ease;
+        }
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 999;
+        }
+        .modal-backdrop.active {
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #d8ecff;
+            margin: 50px 100px;
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(54, 54, 54, 0.5), 0 0 20px rgba(52, 152, 219, 0.3), 0 0 30px rgba(52, 152, 219, 0.2);
+            font-family: 'Press Start 2P', cursive;
+            line-height: 2rem;
+            background: linear-gradient(135deg, #0c6dff 0%, #50b5f8 50%, #e4f0fc 100%);
+            padding: 20px;
+            border-radius: 15px;
+            font-weight: 700;
+            border: 2px solid #5dade2;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+            to {
+                box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4), 0 0 20px rgba(52, 152, 219, 0.2);
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        li {
+            background: #fff;
+            border: 2px solid #3498db;
+            border-radius: 12px;
+            padding: 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        li:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+            border-color: #2980b9;
+            transform: translateY(-4px);
+        }
+        .day-box {
+            background: hsl(204, 100%, 79%);
+            border-bottom: 2px solid #3498db;
+            padding: 16px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #3498db;
+            letter-spacing: 1px;
+        }
+        .challenge-box {
+            flex: 1;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            word-wrap: break-word;
+            line-height: 1.5;
+            color: #2c3e50;
+            background-color: #fcedbb;
+            pointer-events: none;
+        }
+        .code-viewer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 750px;
+            max-height: 85vh;
+            background: #71baff;
+            border: none;
+            border-radius: 16px;
+            padding: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            color: #2c3e50;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .code-viewer.active {
+            display: flex;
+            flex-direction: column;
+        }
+        .modal-header {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: #fff;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: none;
+        }
+        .modal-title {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .modal-close-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        .modal-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+        .modal-close-btn:active {
+            transform: scale(0.95);
+        }
+        .modal-content {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+        }
+        .modal-content pre {
+            margin: 0;
+            padding: 16px;
+            color: #3498db;
+            background: #353535;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+        }
+        .modal-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .explanation {
+            color: #f5f5f5;
+            margin-top: 16px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #5387f7;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .modal-content b {
+            display: none;
+        }
+        .code-viewer b {
+            color: #62bcf8;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .close-btn {
+            display: none;
+        }        
+        
+        footer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 16px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #feffff;
+            margin: 20px auto 0;
+            border-radius: 12px;
+            max-width: 1200px;
+        }
+
+        footer a {
+            color: #feffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 992px) {
+            ul {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3rem;
+                padding: 16px;
+                margin: 10px 10px;
+            }
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            li {
+                min-height: 140px;
+            }
+            .day-box {
+                font-size: 0.85rem;
+                padding: 14px;
+            }
+            .challenge-box {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            .code-viewer {
+                width: 95%;
+                max-width: 750px;
+            }
+            .modal-header {
+                padding: 20px;
+            }
+            .modal-title {
+                font-size: 1rem;
+            }
+            .modal-content {
+                font-size: 0.7rem;
+            }
+            footer {
+                position: relative;;
+            }
+
+        }
+        @media (max-width: 480px) {
+            ul {
+                grid-template-columns: 1fr;
+            }
+            .challenge-box {
+                font-size: 0.85rem;
+            }
+            .code-viewer {
+                width: 95%;
+                max-height: 90vh;
+                border-radius: 12px;
+            }
+            .modal-header {
+                padding: 16px;
+            }
+            .modal-title {
+                font-size: 0.95rem;
+            }
+            .modal-close-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 1.5rem;
+            }
+            .modal-content {
+                padding: 16px;
+                font-size: 0.65rem;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="container">
+        <h1>CodeDex March Challenge</h1>
+        <ul id="solution-list"></ul>
+    </div>
+    <footer>Made with 💖 by <a style="color: #0051ff;" href="https://www.codedex.io/@debmalya">Debmalya</a></footer>
+
+    <div id="code-viewer" class="code-viewer"></div>
+    <script>
+        // List of solution files and challenge names
+        const solutions = [
+            { day: 1, file: 'Day_01/wordle.py', name: 'Wordle 🟩' },
+            { day: 2, file: 'Day_02/bloodmoon.py', name: 'Blood Moon 🩸' },
+            { day: 3, file: 'Day_03/holi.py', name: 'Holi 🌈' },
+            { day: 4, file: 'Day_04/homebrew_computer_club.py', name: 'Homebrew Computer Club 🤓' },
+            { day: 5, file: 'Day_05/alysa_liu.py', name: 'Alysa Liu ⛸️' },
+            { day: 6, file: 'Day_06/daylight_savings.py', name: 'Daylight Savings ⏰' },
+            { day: 7, file: 'Day_07/womens_day.py', name: 'International Women’s Day 💖' },
+            { day: 8, file: 'Day_08/sputnik9.py', name: 'Sputnik 9 🚀' },
+            { day: 9, file: 'Day_09/ringring.py', name: 'Ring Ring ☎️' },
+            { day: 10, file: 'Day_10/hitchhikers_guide.py', name: "Hitchhiker's Guide 🪐" },
+            { day: 11, file: 'Day_11/www.py', name: 'World Wide Web 🌐' },
+            { day: 12, file: 'Day_12/palindrome.py', name: 'Palindrome 🏎️' },
+            { day: 13, file: 'Day_13/pi_day.py', name: 'Pi Day 🥧' },
+            { day: 14, file: 'Day_14/caesar_cipher.py', name: 'Caesar Cipher 🏛️' },
+            { day: 15, file: 'Day_15/oscars.py', name: 'Oscars 2026 🏆' },
+            { day: 16, file: 'Day_16/green_chicago_river.py', name: 'Green Chicago River ☘️' }
+        ];
+        const list = document.getElementById('solution-list');
+        const codeViewer = document.getElementById('code-viewer');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+
+        function closeModal() {
+            codeViewer.classList.remove('active');
+            modalBackdrop.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+
+        solutions.forEach(sol => {
+            const li = document.createElement('li');
+            li.innerHTML = `<div class="day-box">Day ${String(sol.day).padStart(2, '0')}</div><div class="challenge-box">${sol.name}</div>`;
+            li.onclick = async () => {
+                codeViewer.classList.add('active');
+                modalBackdrop.classList.add('active');
+                document.body.classList.add('modal-open');
+                
+                codeViewer.innerHTML = `<div class="modal-header"><h2 class="modal-title">Day ${sol.day}: ${sol.name}</h2><button class="modal-close-btn">✕</button></div><div class="modal-content"><span style="color: #3498db;">Loading content...</span></div>`;
+
+                try {
+                    const dayStr = String(sol.day).padStart(2, '0');
+
+                    const imgSrc = `Day_${dayStr}/${dayStr}.png`;
+
+                    const expFile = `Day_${dayStr}/explanation.txt`;
+
+                    const codeResp = await fetch(sol.file);
+                    if (!codeResp.ok) throw new Error('Code file not found');
+                    const code = await codeResp.text();
+
+                    const expResp = await fetch(expFile);
+
+                    if (!expResp.ok) throw new Error('Explanation file not found');
+
+                    const explanation = await expResp.text();
+                    const escapedCode = code.replace(/[<>]/g, c => ({'<':'&lt;','>':'&gt;'}[c]));
+
+                    const escapedExp = explanation.replace(/\n/g, '<br>');
+                    
+                    codeViewer.innerHTML = `<div class="modal-header"><h2 class="modal-title">Day ${sol.day}: ${sol.name}</h2><button class="modal-close-btn">✕</button></div><div class="modal-content"><img class="modal-image" src="${imgSrc}" alt="Day ${sol.day}"><pre>${escapedCode}</pre><div class="explanation">${escapedExp}</div></div>`;
+                } catch (e) {
+                    codeViewer.innerHTML = `<div class="modal-header"><h2 class="modal-title">Day ${sol.day}: ${sol.name}</h2><button class="modal-close-btn">✕</button></div><div class="modal-content"><span style="color:#e74c3c;">Error loading content: ${e.message}</span></div>`;
+                }
+            };
+            list.appendChild(li);
+        });
+
+        // Use event delegation for the close button
+        codeViewer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal-close-btn')) {
+                closeModal();
+            }
+        });
+
+        // Close modal when clicking backdrop
+        modalBackdrop.onclick = closeModal;
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && codeViewer.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
