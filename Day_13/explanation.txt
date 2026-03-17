@@ -1,1 +1,7 @@
-My function calculates how much crust each friend gets when a round pie is shared evenly. The first part uses math.pi, which is Python’s built‑in way of accessing the value of π. The circumference of the pie is then calculated using the formula π × diameter. Once we know the total crust length, we divide it by the number of friends to find out how much crust each person receives. Finally, the result is wrapped in round(..., 2) to limit the answer to 2 decimal places, making it neat and readable. The entire calculation fits into one simple return statement, making the function short, clean, and efficient.
+My function calculates how much crust each friend gets when a round pie is shared evenly. 
+
+The first part uses math.pi, which is Python’s built‑in way of accessing the value of π. The circumference of the pie is then calculated using the formula π × diameter. 
+
+Once we know the total crust length, we divide it by the number of friends to find out how much crust each person receives. Finally, the result is wrapped in round(..., 2) to limit the answer to 2 decimal places, making it neat and readable. 
+
+The entire calculation fits into one simple return statement, making the function short, clean, and efficient.

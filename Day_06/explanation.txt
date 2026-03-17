@@ -1,1 +1,3 @@
-My calculate_sleep_debt function computes weekly sleep debt and the longest debt streak. It first builds a list of daily debts using max(0, planned − actual) so only undersleeping counts. The total debt is the sum of those values plus 1.0 for the Daylight Savings hour, rounded to one decimal place. To find the longest streak, it scans the daily debts, incrementing a running counter on days with debt (> 0) and resetting it on zero‑debt days, keeping the maximum seen.
+My calculate_sleep_debt function computes weekly sleep debt and the longest debt streak. It first builds a list of daily debts using max(0, planned − actual) so only undersleeping counts. 
+
+The total debt is the sum of those values plus 1.0 for the Daylight Savings hour, rounded to one decimal place. To find the longest streak, it scans the daily debts, incrementing a running counter on days with debt (> 0) and resetting it on zero‑debt days, keeping the maximum seen.

@@ -1,1 +1,9 @@
-This solution works by comparing each person’s Oscar predictions against the list of actual winners and keeping track of who performs best. First, oscars stores the correct winners in order, while best_prediction starts at -1 so that any real score (from 0 to 4) will beat it, and best_predictor stores the current top player’s name. For each predictor, the code separates the person’s name from their guesses, then loops through each category and increases score whenever a guess matches the correct winner in the same position. After calculating that person’s score, the program checks whether it is higher than the current best score; if so, it updates best_prediction, saves the new best_predictor, and resets tie to False. If another person gets the exact same top score, tie becomes True. In the end, the function returns "Tie" if multiple predictors share the highest score, otherwise it returns the name of the best predictor.
+This solution works by comparing each person’s Oscar predictions against the list of actual winners and keeping track of who performs best. 
+
+First, oscars stores the correct winners in order, while best_prediction starts at -1 so that any real score (from 0 to 4) will beat it, and best_predictor stores the current top player’s name. 
+
+For each predictor, the code separates the person’s name from their guesses, then loops through each category and increases score whenever a guess matches the correct winner in the same position. 
+
+After calculating that person’s score, the program checks whether it is higher than the current best score; if so, it updates best_prediction, saves the new best_predictor, and resets tie to False. If another person gets the exact same top score, tie becomes True. 
+
+In the end, the function returns "Tie" if multiple predictors share the highest score, otherwise it returns the name of the best predictor.

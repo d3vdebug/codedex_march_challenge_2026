@@ -1,1 +1,3 @@
-My calculate_descent function computes how long a spacecraft takes to fall from a given altitude by moving through each atmospheric layer one at a time. Each layer has a fixed descent rate, so the function checks how much distance the capsule travels inside that layer, converts that distance from kilometers to meters, and divides it by the layer’s speed to get the time spent there.
+My calculate_descent function computes how long a spacecraft takes to fall from a given altitude by moving through each atmospheric layer one at a time. 
+
+Each layer has a fixed descent rate, so the function checks how much distance the capsule travels inside that layer, converts that distance from kilometers to meters, and divides it by the layer’s speed to get the time spent there.
