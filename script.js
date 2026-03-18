@@ -16,7 +16,7 @@
             { day: 14, file: 'Day_14/caesar_cipher.py', name: 'Caesar Cipher 🏛️' },
             { day: 15, file: 'Day_15/oscars.py', name: 'Oscars 2026 🏆' },
             { day: 16, file: 'Day_16/green_chicago_river.py', name: 'Green Chicago River ☘️' },
-            { day: 17, file: 'Day_16/', name: '❓❓❓' },
+            { day: 17, file: 'Day_17/flight_vouchers.py', name: 'Flight Vouchers 🏖️' },
             { day: 18, file: 'Day_16/', name: '❓❓❓' },
             { day: 19, file: 'Day_16/', name: '❓❓❓' },
             { day: 20, file: 'Day_16/', name: '❓❓❓' },
