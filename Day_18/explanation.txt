@@ -1,0 +1,7 @@
+My upset_probability function calculates the chance of an underdog pulling off a surprise win by comparing the two teams’ seed numbers. 
+
+
+Since a higher seed number means a weaker team, the function starts by checking which of the two seeds is lower and which is higher. It then uses the formula for upset probability — higher_seed / (higher_seed + lower_seed) — to compute the odds of the weaker team winning.
+
+
+For each matchup, the function rounds the result to two decimal places and adds it to a list. By looping through all the matchups and applying the same logic, the function returns a clean list of upset probabilities, showing just how likely (or unlikely!) each underdog is to shock everyone.
