@@ -1,15 +1,15 @@
         /* Music Toggle Button Styles */
         .music-toggle {
             position: fixed;
-            bottom: 20px;
+            bottom: 10px;
             left: 20px;
             z-index: 1002;
             background: #3498db;
             color: #fff;
             border: none;
             border-radius: 50%;
-            width: 48px;
-            height: 48px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -18,8 +18,13 @@
             cursor: url('Assets/click.png'), pointer;
             transition: background 0.2s, transform 0.2s;
         }
+
+        #music-icon {
+            transition: transform 0.2s;
+            font-size: 1.2rem;
+        }
         .music-toggle:hover {
-            background: #217dbb;
+            background: #57c2ff;
             transform: scale(1.08);
         }
         .music-toggle:active {
