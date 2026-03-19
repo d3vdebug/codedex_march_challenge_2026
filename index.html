@@ -13,11 +13,20 @@
 </head>
 <body>
     <div class="modal-backdrop" id="modal-backdrop"></div>
+    <!-- Background Music Audio Element -->
+    <audio id="bg-music" src="Assets/music.mp3" loop preload="auto"></audio>
     <div class="container">
     
     <div class="header-section">
         <h1>Codédex March Challenge</h1>
-        
+        <div class="progress-container">
+
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            
+            <span class="progress-text">18/30</span>
+        </div>
     </div>
         <div class="buttons">
             <button onclick="window.open('https://www.codedex.io/community/monthly-challenge/f6fcKs3xRKWhJQdlkKGV')">Start Challenge</button>
@@ -31,6 +40,10 @@
     </a>
 
     <div id="code-viewer" class="code-viewer"></div>
+    <!-- Music Toggle Button -->
+    <button id="music-toggle" class="music-toggle" title="Toggle Music">
+        <span id="music-icon" class="fa fa-volume-up"></span>
+    </button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
     <script src="script.js"></script>

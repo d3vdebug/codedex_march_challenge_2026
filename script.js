@@ -51,10 +51,20 @@
             document.body.classList.remove('modal-open');
         }
 
+        // --- Click Sound Effect ---
+        const clickSound = new Audio('Assets/click.wav');
+        clickSound.volume = 0.7;
+
         solutions.forEach(sol => {
             const li = document.createElement('li');
             li.innerHTML = `<div class="day-box">Day ${String(sol.day).padStart(2, '0')}</div><div class="challenge-box">${sol.name}</div>`;
             li.onclick = async () => {
+                // Play click sound
+                try {
+                    clickSound.currentTime = 0;
+                    clickSound.play();
+                } catch (e) {}
+
                 codeViewer.classList.add('active');
                 modalBackdrop.classList.add('active');
                 document.body.classList.add('modal-open');
@@ -100,10 +110,10 @@
                         <h2 class="modal-title">Day ${sol.day}: ${sol.name}</h2>
                         <button class="modal-close-btn">✕</button></div>
                         <div class="modal-content"><img class="modal-image" src="${imgSrc}" alt="Day ${sol.day}">
-                        <div class="subheading">My Solution</div>
+                        <div>${challengeButton}</div><div class="subheading">My Solution</div>
                          <pre><code class="language-python">${escapedCode}</code></pre>
                         <div class="subheading">Explanation</div>
-                        <div class="explanation">${escapedExp}</div>${challengeButton}</div>`;
+                        <div class="explanation">${escapedExp}</div>`;
                     Prism.highlightAll();
                 } catch (e) {
                     codeViewer.innerHTML = `<div class="modal-header"><h2 class="modal-title">Day ${sol.day}: ${sol.name}</h2><button class="modal-close-btn">✕</button></div><div class="modal-content"><span style="color:#3498db; font-size: 1.2rem; text-align: center; display: block;">Coming Soon!</span></div>`;
@@ -132,3 +142,51 @@
         function scrollToChallenges() {
             document.getElementById('solution-list').scrollIntoView({ behavior: 'smooth' });
         }
+
+        // --- Background Music Logic ---
+        const bgMusic = document.getElementById('bg-music');
+        const musicToggle = document.getElementById('music-toggle');
+        const musicIcon = document.getElementById('music-icon');
+
+        // Only play music when user clicks the toggle button
+        bgMusic.volume = 0.5;
+
+        function playMusic() {
+            if (bgMusic.paused) {
+                bgMusic.play().catch(() => {});
+            }
+        }
+
+        function pauseMusic() {
+            if (!bgMusic.paused) {
+                bgMusic.pause();
+            }
+        }
+
+        function toggleMusic() {
+            if (bgMusic.paused) {
+                playMusic();
+                musicIcon.classList.remove('fa-volume-mute');
+                musicIcon.classList.add('fa-volume-up');
+            } else {
+                pauseMusic();
+                musicIcon.classList.remove('fa-volume-up');
+                musicIcon.classList.add('fa-volume-mute');
+            }
+        }
+
+        // Set initial icon to muted
+        function updateMusicIcon() {
+            musicIcon.classList.remove('fa-volume-up');
+            musicIcon.classList.add('fa-volume-mute');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            pauseMusic();
+            updateMusicIcon();
+        });
+
+        // Only toggle music on button click
+        musicToggle.addEventListener('click', () => {
+            toggleMusic();
+        });
