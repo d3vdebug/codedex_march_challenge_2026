@@ -1,0 +1,5 @@
+# test case 1: "CODEX", "COINS" → 2
+# test case 2: "HELLO", "WORLD" → 1
+# test case 3: "PIZZA", "RAMEN" → 0
+# test case 4: "MOCHI", "MOCHI" → 5
+# test case 5: "REACH", "REACT" → 4

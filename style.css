@@ -38,11 +38,16 @@
             padding: 0px;
             min-height: 100vh;
         }
-        body.modal-open .container {
-            filter: blur(5px);
-            transition: filter 0.3s ease;
+        body.modal-open .container{
+            filter: blur(1000px);
+            transition: filter 0.9s ease;
         }
+
         .header-section{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -51,6 +56,7 @@
             background: linear-gradient(135deg, #0163d3 0%, #50b5f8 50%, #3593fd 100%);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             border-bottom: 2px solid #ffffff;
+            z-index: 1;
         }
         .progress-container {
             display: flex;
@@ -61,7 +67,7 @@
             margin-bottom: 10px;
         }
         .progress-bar {
-            width: 200px;
+            width: 650px;
             height: 25px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
@@ -103,18 +109,16 @@
         h1 {
             text-align: center;
             color: #ffffff;
-            border: 3px solid #ffffff;
-            border-style: dotted;
-
+            
             font-size: 1.8rem;
             letter-spacing: 3px;
             text-shadow: 0 0 10px rgba(54, 54, 54, 0.5), 0 0 20px rgba(52, 152, 219, 0.3), 0 0 30px rgba(52, 152, 219, 0.2);
             font-family: 'Press Start 2P', cursive;
             line-height: 2rem;
            
-            padding: 20px;
-            border-radius: 15px;
-            font-weight: 700;
+            padding: 0px;
+            border-radius: 0px;
+            font-weight: 100;
             
             
            
@@ -124,15 +128,18 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 200PX;
         }
 
         .buttons button {
-            background: linear-gradient(135deg, hsl(224, 100%, 63%) 0%, #23a7ff 100%);
+            background: linear-gradient(135deg, hsl(219, 100%, 58%) 0%, #23a7ff 100%);
             color: #ffffff;
             margin-bottom: 30px;
             border: 0px solid #ffffff;
             border-left: 4px solid #ffffff;
             border-right: 4px solid #ffffff;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
             padding: 18px 24px;
             border-radius: 15px;
             font-size: 1rem;
@@ -146,6 +153,7 @@
 
         .buttons button:hover {
             transform: translateY(-2px);
+            background: linear-gradient(135deg,#23a7ff 100%, hsl(224, 100%, 63%) 0%);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             color: rgb(68, 68, 68);
         }
@@ -174,6 +182,8 @@
         }
         .challenge-btn:hover {
             transform: translateY(-2px);
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
@@ -314,7 +324,7 @@
         .modal-content pre {
             margin: 0;
             padding: 16px;
-
+            margin-bottom: 5px;
             border-radius: 8px;
             overflow-x: auto;
             border-left: 4px solid #0084ff;
@@ -323,9 +333,11 @@
         .modal-image {
             max-width: 100%;
             height: auto;
-            margin-bottom: 16px;
-            border-radius: 8px;
+            border-radius: 15px;
+            border: 5px solid #ffffff;
+            
         }
+
         .subheading {
             display: inline-block;
             margin-bottom: 4px;
@@ -375,7 +387,7 @@
         .github {
             position: fixed;
             padding: 2px;
-            bottom: 20px;
+            bottom: 10px;
             right: 20px;
             color: #0e0e0e;
             font-size: 1.5rem;
@@ -399,14 +411,14 @@
             font-weight: 600;
             color: #feffff;
             margin: 20px auto 0;
-            border-radius: 12px;
-            max-width: 1200px;
-        }
+            
+            background-color: #353535;
+            border-top: 4px solid #ffffff;
+            padding: 10pxpx;
 
         footer a {
             color: #0e0e0e;
             text-decoration: none;
-            back
         }
 
         footer a:hover {
@@ -462,6 +474,12 @@
             li {
                 min-height: 140px;
             }
+            .buttons{
+                margin-top: 224px;
+            }
+            .progress-bar {
+                width: 400px;
+            }
             .day-box {
                 font-size: 0.85rem;
                 padding: 14px;
@@ -491,6 +509,9 @@
         @media (max-width: 480px) {
             ul {
                 grid-template-columns: 1fr;
+            }
+            .progress-bar {
+                width: 150px;
             }
             .challenge-box {
                 font-size: 0.85rem;

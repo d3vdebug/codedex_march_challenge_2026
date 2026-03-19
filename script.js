@@ -64,6 +64,7 @@
                     clickSound.currentTime = 0;
                     clickSound.play();
                 } catch (e) {}
+            
 
                 codeViewer.classList.add('active');
                 modalBackdrop.classList.add('active');
@@ -83,6 +84,8 @@
 
                     const expFile = `Day_${dayStr}/explanation.txt`;
 
+                    
+
                     const codeResp = await fetch(sol.file);
                     if (!codeResp.ok) throw new Error('Code file not found');
                     const code = await codeResp.text();
@@ -95,6 +98,13 @@
                     const escapedCode = code.replace(/[<>]/g, c => ({'<':'&lt;','>':'&gt;'}[c]));
 
                     const escapedExp = explanation.replace(/\n/g, '<br>');
+
+                    const testcaseFile = `Day_${dayStr}/testcase.txt`;
+                    const testcaseResp = await fetch(testcaseFile);
+                    if (!testcaseResp.ok) throw new Error('Testcase file not found');
+                    const testcase = await testcaseResp.text();
+
+
                     
                     let challengeButton = '';
                     const dayKey = String(sol.day).padStart(2, '0');
@@ -112,11 +122,14 @@
                         <div class="modal-content"><img class="modal-image" src="${imgSrc}" alt="Day ${sol.day}">
                         <div>${challengeButton}</div><div class="subheading">My Solution</div>
                          <pre><code class="language-python">${escapedCode}</code></pre>
+                         <pre><code class="language-python">${testcase}</code></pre>
                         <div class="subheading">Explanation</div>
                         <div class="explanation">${escapedExp}</div>`;
                     Prism.highlightAll();
                 } catch (e) {
-                    codeViewer.innerHTML = `<div class="modal-header"><h2 class="modal-title">Day ${sol.day}: ${sol.name}</h2><button class="modal-close-btn">✕</button></div><div class="modal-content"><span style="color:#3498db; font-size: 1.2rem; text-align: center; display: block;">Coming Soon!</span></div>`;
+                    codeViewer.innerHTML = `<div class="modal-header"><h2 class="modal-title">Day ${sol.day}: ${sol.name}</h2><button class="modal-close-btn">✕</button></div>
+                    <div class="modal-content">
+                    <span style="color:#ffffff; font-size: 1.2rem; text-align: center; display: block;">404 - File Not Found</span></div>`;
                 }
             };
             list.appendChild(li);
