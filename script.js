@@ -18,7 +18,7 @@
             { day: 16, file: 'Day_16/green_chicago_river.py', name: 'Green Chicago River ☘️' },
             { day: 17, file: 'Day_17/flight_vouchers.py', name: 'Flight Vouchers 🏖️' },
             { day: 18, file: 'Day_18/march_madness.py', name: 'March Madness 🏀' },
-            { day: 19, file: 'Day_19/', name: '❓❓❓' },
+            { day: 19, file: 'Day_19/cherry_blossoms.py', name: 'Cherry Blossoms 🌸' },
             { day: 20, file: 'Day_20/', name: '❓❓❓' },
             { day: 21, file: 'Day_21/', name: '❓❓❓' },
             { day: 22, file: 'Day_22/', name: '❓❓❓' },

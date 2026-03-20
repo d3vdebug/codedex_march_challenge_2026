@@ -1,0 +1,7 @@
+My cherry_blossoms function predicts the first day cherry blossoms bloom by scanning through the temperature list starting on day 5, the earliest point where a full 5‑day window exists. 
+
+For each day from that point onward, the function slices out the last five temperatures, calculates their average, and checks whether it exceeds 15°C. If it does, that day (converted to 1‑indexed form with i + 1) is returned as the bloom day. 
+
+If no 5‑day rolling average ever crosses 15°C, the function returns –1, meaning the blossoms never reach peak bloom. 
+
+This approach mirrors the real Japanese forecasting method by tracking heat buildup over time in a simple, readable way.
