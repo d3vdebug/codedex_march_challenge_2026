@@ -1,0 +1,7 @@
+In this solution, I simulate Twitter’s character limit by starting with a balance of 140 characters and subtracting based on the tweet content. 
+
+First, I split the tweet into words so I can easily detect special tokens like mentions and URLs, and I subtract all spaces upfront since they count as normal characters. Then, I iterate through each word and apply rule-based counting: if a word starts with @, I subtract a fixed 20 characters, and if it starts with http:// or https://, I subtract 23 characters. 
+
+For all other words, I process each character individually—checking its Unicode value to detect emojis (which count as 2 characters) while normal characters count as 1. 
+
+This structured, rule-by-rule deduction ensures the final balance accurately reflects how many characters remain or exceed the 140 limit.

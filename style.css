@@ -82,7 +82,7 @@
         }
         .progress-fill {
             height: 100%;
-            width: 63%; /* 19/30 = 63.33% */
+            width: 66.67%; /* 20/30 = 66.67% */
             background: linear-gradient(90deg, #64b2ff 0%, #1472ff 100%);
             border-radius: 8px;
             transition: width 0.5s ease;
