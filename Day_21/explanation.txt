@@ -1,0 +1,7 @@
+In this solution, I simulate how the pipe loses water over time using a compound decay approach. 
+
+I start with the initial volume and, for each hour, update it using the formula current × (1 - leak/100), which represents a percentage-based loss. 
+
+I round the value at every step to maintain precision as required. After running the simulation for the given number of hours, I check whether the final volume has dropped below the minimum pressure threshold—if it has, the pipe is considered failed and I return -1. 
+
+Otherwise, I return the remaining volume rounded to two decimal places, representing the water left after all hours have passed.
