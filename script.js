@@ -21,7 +21,7 @@
             { day: 19, file: 'Day_19/cherry_blossoms.py', name: 'Cherry Blossoms 🌸' },
             { day: 20, file: 'Day_20/first_tweet.py', name: 'First Tweet 🐦' },
             { day: 21, file: 'Day_21/water_day.py', name: 'Water Day 💧' },
-            { day: 22, file: 'Day_22/', name: '❓❓❓' },
+            { day: 22, file: 'Day_22/cuddly_kittens.py', name: 'Cuddly Kittens 🐈' },
             { day: 23, file: 'Day_23/', name: '❓❓❓' },
             { day: 24, file: 'Day_16/', name: '❓❓❓' },
             { day: 25, file: 'Day_16/', name: '❓❓❓' },

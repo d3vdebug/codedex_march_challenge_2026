@@ -1,0 +1,7 @@
+In this solution, I check all possible consecutive groups of kittens by using two loops: the outer loop selects a starting index, and the inner loop gradually expands the group. For each subarray, I calculate the difference between the maximum and minimum energy levels and verify if it stays within the given limit. 
+
+If it does, I update the maximum group length found so far. This ensures that I explore every valid contiguous group and don’t miss any potential answer.
+
+A key optimization here is the break statement. As soon as a group becomes invalid (the energy difference exceeds the limit), I stop expanding it further because adding more kittens will only increase or maintain the difference, not reduce it. This avoids unnecessary checks and improves performance compared to a full brute-force approach. 
+
+While the solution is still not the most optimal (due to repeated max() and min() calculations), it’s a clean and logical way to solve the problem with early pruning.
