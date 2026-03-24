@@ -22,14 +22,14 @@
             { day: 20, file: 'Day_20/first_tweet.py', name: 'First Tweet 🐦' },
             { day: 21, file: 'Day_21/water_day.py', name: 'Water Day 💧' },
             { day: 22, file: 'Day_22/cuddly_kittens.py', name: 'Cuddly Kittens 🐈' },
-            { day: 23, file: 'Day_23/', name: '❓❓❓' },
-            { day: 24, file: 'Day_16/', name: '❓❓❓' },
-            { day: 25, file: 'Day_16/', name: '❓❓❓' },
-            { day: 26, file: 'Day_16/', name: '❓❓❓' },
-            { day: 27, file: 'Day_16/', name: '❓❓❓' },
-            { day: 28, file: 'Day_16/', name: '❓❓❓' },
-            { day: 29, file: 'Day_16/', name: '❓❓❓' },
-            { day: 30, file: 'Day_16/', name: '❓❓❓' }
+            { day: 23, file: 'Day_23/earthquake_anomaly.py', name: 'Earthquake Anomaly 🌏' },
+            { day: 24, file: 'Day_24/', name: '❓❓❓' },
+            { day: 25, file: 'Day_25/', name: '❓❓❓' },
+            { day: 26, file: 'Day_26/', name: '❓❓❓' },
+            { day: 27, file: 'Day_27/', name: '❓❓❓' },
+            { day: 28, file: 'Day_28/', name: '❓❓❓' },
+            { day: 29, file: 'Day_29/', name: '❓❓❓' },
+            { day: 30, file: 'Day_30/', name: '❓❓❓' }
         ];
 
         let challengeLinks = {};
