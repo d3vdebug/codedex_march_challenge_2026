@@ -23,7 +23,7 @@
             { day: 21, file: 'Day_21/water_day.py', name: 'Water Day 💧' },
             { day: 22, file: 'Day_22/cuddly_kittens.py', name: 'Cuddly Kittens 🐈' },
             { day: 23, file: 'Day_23/earthquake_anomaly.py', name: 'Earthquake Anomaly 🌏' },
-            { day: 24, file: 'Day_24/', name: '❓❓❓' },
+            { day: 24, file: 'Day_24/opening_day.py', name: 'Opening Day ⚾' },
             { day: 25, file: 'Day_25/', name: '❓❓❓' },
             { day: 26, file: 'Day_26/', name: '❓❓❓' },
             { day: 27, file: 'Day_27/', name: '❓❓❓' },

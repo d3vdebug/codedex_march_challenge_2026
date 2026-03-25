@@ -2,6 +2,6 @@ My earthquake_anomaly function detects suspicious tremor readings by comparing e
 
 After checking that the list isn’t empty, it uses Python’s built‑in statistics.median() to calculate the median magnitude.
 
- It then multiplies this median by 1.5 to get the anomaly threshold. The function loops through the readings by index, and whenever it finds a value greater than this threshold, it appends that index to the sus list. 
+It then multiplies this median by 1.5 to get the anomaly threshold. The function loops through the readings by index, and whenever it finds a value greater than this threshold, it appends that index to the sus list. 
  
- Finally, it returns all indices where the readings exceed the threshold, giving a clean list of potential earthquake anomalies. 
+Finally, it returns all indices where the readings exceed the threshold, giving a clean list of potential earthquake anomalies. 

@@ -1,0 +1,7 @@
+My streak_counter function calculates the longest winning streak by looping through the list of game results and tracking consecutive wins while treating rainouts as neutral events.
+
+Each time the loop encounters a "W", the current streak (cur_win) increases by one. When it encounters an "R", the streak continues unchanged, rainouts don’t add wins, but they also don’t break the streak.
+
+A loss ("L") resets the streak to zero. After processing each game, the function updates max_win with the highest streak seen so far.
+
+By the end, max_win holds the longest stretch of wins connected together, even if rainouts appear in between.
