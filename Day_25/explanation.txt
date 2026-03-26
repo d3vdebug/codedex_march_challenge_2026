@@ -1,0 +1,7 @@
+My solution flattens a nested list in Python using recursion. It starts by creating an empty list called result, then loops through each element in the input list.
+
+If an element is itself a list, the function calls flatten() again on that sublist and adds all of its elements to result using extend(). If the element is not a list, it is simply added to result with append().
+
+In this code, type(item) == type([]) is used to check whether an element is a list, which works even though the function parameter is named list.
+
+Overall, the logic is correct and demonstrates how recursion can be used effectively to convert a nested list into a single flattened list.
