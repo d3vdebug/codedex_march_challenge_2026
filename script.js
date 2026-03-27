@@ -25,7 +25,7 @@
             { day: 23, file: 'Day_23/earthquake_anomaly.py', name: 'Earthquake Anomaly 🌏' },
             { day: 24, file: 'Day_24/opening_day.py', name: 'Opening Day ⚾' },
             { day: 25, file: 'Day_25/flatten_array.py', name: 'Flatten Array 🪜' },
-            { day: 26, file: 'Day_26/', name: '❓❓❓' },
+            { day: 26, file: 'Day_26/monkey.py', name: 'Infinite Monkey Theorem 🐒' },
             { day: 27, file: 'Day_27/', name: '❓❓❓' },
             { day: 28, file: 'Day_28/', name: '❓❓❓' },
             { day: 29, file: 'Day_29/', name: '❓❓❓' },

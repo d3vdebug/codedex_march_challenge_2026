@@ -1,0 +1,13 @@
+In this solution, I scan the attempt string using a sliding window of size equal to the target length. 
+
+First, I store n = len(target) so I know how large each comparison window should be. Then, I iterate through every valid starting index i such that a full window can fit inside the attempt string. 
+
+For each position, I extract a substring window = attempt[i:n+i] and compare it with the target character by character using a loop. 
+
+I count how many characters match at the exact same positions, which gives me a match count. This is then converted into a similarity percentage using (match / n) * 100.
+
+While iterating, I continuously track the highest similarity score found so far and update the corresponding best_index whenever a better match appears. After checking all possible windows, I handle the edge case where no characters match at all (similarity = 0), returning None for attempts. 
+
+Otherwise, I compute the theoretical number of attempts using the formula (100 / similarity) ^ n, which estimates how long it would take to randomly achieve a perfect match. 
+
+Finally, I return the result as a dictionary containing the best starting index, the similarity rounded to two decimal places, and the calculated attempts. This approach ensures that every possible alignment is evaluated and the closest match is accurately identified.
