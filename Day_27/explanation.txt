@@ -1,0 +1,11 @@
+In this solution, I used a BFS approach to simulate infection spread.
+
+I start by importing deque to efficiently manage the queue. Inside the function, I initialize a queue to store infected positions, a humans counter to track healthy people, and a days variable to count how long the infection takes.
+
+I also define the four possible directions (up, down, left, right). Then, I loop through the entire grid: if a cell contains an infected person (🧟), I add its position to the queue, and if it contains a healthy person (👤), I increment the human count.
+
+Next, I run a loop while there are still infected cells in the queue and healthy people remaining. For each level of the queue (which represents one full day), I process all current infected cells.
+
+I remove each position from the queue, check its four neighbors, and if a neighbor is within bounds and healthy, I convert it into infected, decrease the human count, and add it to the queue so it can spread further. After processing one full level, I increment the days counter.
+
+Finally, once the loop ends, I return the number of days if all humans are infected, otherwise -1 if some people couldn’t be reached.
