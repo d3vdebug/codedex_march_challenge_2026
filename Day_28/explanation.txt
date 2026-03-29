@@ -1,0 +1,9 @@
+My function starts by defining average_time with two parameters: total, which is a string representing time in "H:MM:SS" format, and completed, which is the number of challenges completed.
+
+The line time = total.split(":") breaks the time string into a list containing hours, minutes, and seconds as separate elements.
+
+Next, total_seconds = int(time[0])*60*60 + int(time[1])*60 + int(time[2]) converts each part into seconds by multiplying hours by 3600, minutes by 60, and then adding the seconds, giving the total time spent in seconds.
+
+The line avg_time = round(total_seconds / completed) calculates the average time per challenge by dividing the total seconds by the number of challenges and rounding the result to the nearest whole second.
+
+Finally, return avg_time sends this rounded average value back as the output of the function.

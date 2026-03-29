@@ -27,7 +27,7 @@
             { day: 25, file: 'Day_25/flatten_array.py', name: 'Flatten Array 🪜' },
             { day: 26, file: 'Day_26/monkey.py', name: 'Infinite Monkey Theorem 🐒' },
             { day: 27, file: 'Day_27/28_days_later.py', name: '28 Days Later 🧟' },
-            { day: 28, file: 'Day_28/', name: '❓❓❓' },
+            { day: 28, file: 'Day_28/stats.py', name: 'Leaderboard Stats 📊' },
             { day: 29, file: 'Day_29/', name: '❓❓❓' },
             { day: 30, file: 'Day_30/', name: '❓❓❓' }
         ];
