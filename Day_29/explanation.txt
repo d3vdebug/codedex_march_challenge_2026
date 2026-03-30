@@ -1,0 +1,7 @@
+In my solution, I initialize a mood counter to track the overall sentiment of the message, then define two lists: happy and sad, each containing their respective emoticons.
+
+I iterate through every happy emoticon and use message.count(emo) to count how many times it appears in the text, adding that count to the mood score.
+
+Then, I do the same for sad emoticons, but subtract their counts instead. This way, each occurrence directly contributes +1 or -1 to the final score without needing to split or parse the string manually.
+
+Finally, I return the computed mood, which represents the overall emotional tone of the message in a clean and efficient way.

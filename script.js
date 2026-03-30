@@ -28,7 +28,7 @@
             { day: 26, file: 'Day_26/monkey.py', name: 'Infinite Monkey Theorem 🐒' },
             { day: 27, file: 'Day_27/28_days_later.py', name: '28 Days Later 🧟' },
             { day: 28, file: 'Day_28/stats.py', name: 'Leaderboard Stats 📊' },
-            { day: 29, file: 'Day_29/', name: '❓❓❓' },
+            { day: 29, file: 'Day_29/emoji.py', name: 'Ye Olde Emoticons 📰' },
             { day: 30, file: 'Day_30/', name: '❓❓❓' }
         ];
 
@@ -46,6 +46,10 @@
         const modalBackdrop = document.getElementById('modal-backdrop');
 
         function closeModal() {
+            try {
+                closeSound.currentTime = 0;
+                closeSound.play();
+            } catch (e) {}
             codeViewer.classList.remove('active');
             modalBackdrop.classList.remove('active');
             document.body.classList.remove('modal-open');
@@ -54,6 +58,9 @@
         // --- Click Sound Effect ---
         const clickSound = new Audio('Assets/click.wav');
         clickSound.volume = 0.7;
+
+        const closeSound = new Audio('Assets/close.wav');
+        closeSound.volume = 0.5;
 
         solutions.forEach(sol => {
             const li = document.createElement('li');
