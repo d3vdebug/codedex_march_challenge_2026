@@ -8,6 +8,12 @@ The Codédex March Challenge is a month-long event featuring 30 unique daily cha
 
 The challenges are designed to be engaging and educational, helping you practice Python programming while learning about fascinating topics. You can solve them at your own pace, share your solutions with the community, and even compete on leaderboards.
 
+## 🌐 Visit the Challenge Showcase
+
+I've created this interactive blog site to showcase my solutions to all 30 challenges. Each day includes my Python code, detailed explanations, and test cases. It's a great way to see different approaches and get inspired for your own solutions.
+
+**Check it out live here:** [https://d3vdebug.github.io/codedex_march_challenge_2026/](https://d3vdebug.github.io/codedex_march_challenge_2026/)
+
 ## 📅 Daily Challenges Overview
 
 Here's a sneak peek at what March 2026 had in store:
@@ -43,11 +49,7 @@ Here's a sneak peek at what March 2026 had in store:
 29. **Ye Olde Emoticons** 📰 - Emoji evolution
 30. **My Best Streak** 🔥 - Personal bests
 
-## 🌐 Visit the Challenge Showcase
 
-I've created this interactive blog site to showcase my solutions to all 30 challenges. Each day includes my Python code, detailed explanations, and test cases. It's a great way to see different approaches and get inspired for your own solutions.
-
-**Check it out live here:** [https://d3vdebug.github.io/codedex_march_challenge_2026/](https://d3vdebug.github.io/codedex_march_challenge_2026/)
 
 ## 🚀 Join the Fun!
 
