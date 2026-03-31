@@ -1,5 +1,24 @@
 # test case 1:
+message = "dwwdfn dw gdzq"
+shift = 3
+→ "attack at dawn"
+
 # test case 2:
+message = "ymj bfqwzx bfx ufzq"
+shift = 5
+→ "the walrus was paul"
+
 # test case 3:
+message = "ai wlsyph womt kcq gpeww"
+shift = 4
+→ "we should skip gym class"
+
 # test case 4:
+message = "the owls are not what they seem"
+shift = 0
+→ "the owls are not what they seem"
+
 # test case 5:
+message = "xli ribx hempc gleppirki mw efsyx xli swgevw"
+shift = 30
+→ "the next daily challenge is about the oscars"

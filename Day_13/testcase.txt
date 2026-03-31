@@ -1,2 +1,19 @@
-test case 1
-test case 2
+# test case 1:
+diameter = 10, friends = 8
+→ 3.93
+
+# test case 2:
+diameter = 12, friends = 5
+→ 7.54
+
+# test case 3:
+diameter = 8, friends = 4
+→ 6.28
+
+# test case 4:
+diameter = 6, friends = 1
+→ 18.85
+
+# test case 5:
+diameter = 15, friends = 6
+→ 7.85

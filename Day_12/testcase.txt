@@ -1,2 +1,14 @@
-test case 1
-test case 2
+# test case 1: "racecar"
+→ True
+
+# test case 2: "Was it a car or a cat I saw"
+→ True
+
+# test case 3: "11 11"
+→ True
+
+# test case 4: "12345"
+→ False
+
+# test case 5: "OOoOOOOoO0"
+→ False

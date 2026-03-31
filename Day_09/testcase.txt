@@ -1,5 +1,19 @@
-# test case 1:
-# test case 2:
-# test case 3:
-# test case 4:
-# test case 5:
+# test case 1: 
+# transcript = "Mr. Watson, come here, I want to see you."
+→ 9
+
+# test case 2: 
+# "Hello Neil and Buzz, I am talking to you by telephone from the Oval Room at the White House, and this certainly has to be the most historic telephone call ever made."
+→ 27
+
+# test case 3: 
+# transcript = ""
+→ 0
+
+# test case 4: 
+# transcript = "omg i am in this new cafe lol deadass the vibes here insane lol no cap yesss... we are just vibing haha omg yesss... can't even... deadass for real yesss OMG YESSS period yep yep... girl i feel you girl no cap okay... bet sounds good to me. bye girl love ya."             
+→ 39
+
+# test case 5: 
+# transcript = "Hello, it's me. I was wondering if after all these years you'd like to meet. To go over everything. They say that time's supposed to heal ya, but I ain't done much healing. Hello, can you hear me? I'm in California dreaming about who we used to be. When we were younger and free. I've forgotten how it felt before the world fell at our feet."
+→ 59

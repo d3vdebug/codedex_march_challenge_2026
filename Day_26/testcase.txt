@@ -1,5 +1,24 @@
 # test case 1:
+target = "hamlet"
+attempt = "xxhamxetxxxx"
+→ {'best_index': 2, 'similarity': 83.33, 'attempts': 3}
+
 # test case 2:
+target = "To be, or not to be."
+attempt = "7q$To be, or not to bug?9x"
+→ {'best_index': 3, 'similarity': 90.0, 'attempts': 8}
+
 # test case 3:
+target = "Et tu, Brute?" 
+attempt = "?Et tu, Brute!#Et tu, Brute!"
+→ {'best_index': 1, 'similarity': 92.31, 'attempts': 3}
+
 # test case 4:
+target = "If you prick us, do we not bleed?"
+attempt = "9oIf you prick me, do I not leak?ka2"
+→ {'best_index': 2, 'similarity': 54.55, 'attempts': 486370637}
+
 # test case 5:
+target = "Hello, world!"
+attempt = "Hello, world!!"
+→ {'best_index': 0, 'similarity': 100.0, 'attempts': 1}

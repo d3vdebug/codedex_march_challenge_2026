@@ -1,5 +1,29 @@
 # test case 1:
+vouchers = [50, 120, 20]
+delays = [2, 4, 1]
+max_wait = 3
+→ 0
+
 # test case 2:
+vouchers = [300, 400, 1000]
+delays = [5, 6, 10]
+max_wait = 4
+→ -1
+
 # test case 3:
+vouchers = [90, 40, 200]
+delays = [3, 1, 5]
+max_wait = 2
+→ 1
+
 # test case 4:
+vouchers = [60, 120, 90]
+delays = [2, 4, 3]
+max_wait = 5
+→ 0
+
 # test case 5:
+vouchers = [0, 0]
+delays = [1, 2]
+max_wait = 2
+→ 0

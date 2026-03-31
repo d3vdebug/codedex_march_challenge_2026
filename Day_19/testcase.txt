@@ -1,5 +1,14 @@
-# test case 1:
-# test case 2:
-# test case 3:
-# test case 4:
-# test case 5:
+# test case 1: [10, 11, 13, 14, 16, 17, 18]
+→ 7
+
+# test case 2: [12, 14, 15, 16, 17, 11, 13]
+→ -1
+
+# test case 3: [14, 15, 16, 17, 18, 12, 8]
+→ 5
+
+# test case 4: [15, 16, 15, 16]
+→ -1
+
+# test case 5: []
+→ -1

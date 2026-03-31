@@ -1,5 +1,24 @@
 # test case 1:
+total = "1:41:29"
+completed = 26
+→ 234
+
 # test case 2:
+total = "10:49:08"
+completed = 27
+→ 1443
+
 # test case 3:
+total = "1:00:00" 
+completed = 12
+→ 300
+
 # test case 4:
+total = "0:45:45"
+completed = 7
+→ 392
+
 # test case 5:
+total = "5:00:00" 
+completed = 25
+→ 720

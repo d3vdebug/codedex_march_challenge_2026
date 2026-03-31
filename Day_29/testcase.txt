@@ -1,5 +1,10 @@
-# test case 1:
-# test case 2:
-# test case 3:
-# test case 4:
-# test case 5:
+# test case 1: "i'm going to see a psychic tonite :)"
+→ 1
+# test case 2: "dancing with friends at the club! XD come thru <3 <3"
+→ 3
+# test case 3: "i feel happy for u :) but also sad :("
+→ 0
+# test case 4: "let's freaking go!!! \\m/\\m/\\m/\\m/\\m/\\m/ t(-.-t)"
+→ 5
+# test case 5: "ewww emoticons pls no"
+→ 0

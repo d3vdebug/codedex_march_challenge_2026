@@ -462,6 +462,23 @@
             background: #2980b9;
         }
 
+        .language-python::-webkit-scrollbar {
+            width: 0;
+            height: 6px;;
+        }
+        .language-python::-webkit-scrollbar-track {
+            background: #ebeff3;
+            
+        }
+        .language-python::-webkit-scrollbar-thumb {
+            background: #235edd;
+            border-radius: 25px;
+        }
+        .language-python::-webkit-scrollbar-thumb:hover {
+            background: #93d4ff;
+        }
+
+         /* Responsive Styles */
         @media (max-width: 992px) {
             ul {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));

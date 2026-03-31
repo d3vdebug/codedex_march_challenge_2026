@@ -1,5 +1,19 @@
 # test case 1:
+matchups = [["Duke", 1, "Siena", 16], ["Ohio State", 8, "TCU", 9]]
+→ [0.06, 0.47]
+
 # test case 2:
+matchups = [ ["Michigan", 1, "Lehigh", 16], ["Nebraska", 4, "Troy", 13], ["Houston", 2, "Akron", 15] ]
+→ [0.06, 0.24, 0.12]
+
 # test case 3:
+matchups = [["Florida", 1, "Prairie View A&M", 16], ["Nebraska", 4, "Troy", 13], ["Vanderbilt", 5, "McNeese", 12]]
+→ [0.06, 0.24, 0.29]
+
 # test case 4:
+matchups = [["North Carolina", 6, "VCU", 11], ["Michigan State", 3, "North Dakota State", 14]]
+→ [0.35, 0.18]
+
 # test case 5:
+matchups = [["Kansas", 4, "Cal Baptist", 13], ["UConn", 2, "Furman", 15]]
+→ [0.24, 0.12]

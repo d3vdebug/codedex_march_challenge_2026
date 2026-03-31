@@ -1,5 +1,14 @@
-# test case 1:
-# test case 2:
-# test case 3:
-# test case 4:
-# test case 5:
+# test case 1: ["W", "W", "L", "W", "W", "W", "L", "W", "W"]
+→ 3
+
+# test case 2: ["W", "W", "R", "W", "W", "L", "W"]
+→ 4
+
+# test case 3: ["R", "R", "W", "R", "R", "W", "W", "R", "R", "W", "W", "W", "R"]
+→ 6
+
+# test case 4: ["R", "R", "L", "R", "L", "R"]
+→ 0
+
+# test case 5: ["L", "R", "L", "W", "R", "W", "L"]
+→ 2

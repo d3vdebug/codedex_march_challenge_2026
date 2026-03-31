@@ -1,5 +1,19 @@
 # test case 1:
+tweet = "just setting up my twttr"
+→ 116
+
 # test case 2:
+tweet = "Check out this link https://www.averylongurlthatgoesonnnnnn.com and this one https://short.co too!"
+→ 55
+
 # test case 3:
+tweet = "Wow I really cannot believe how much I have to say today, there are just so many things going on in my life right now and I really need to tell everyone about all of it immediately!!"
+→ -42
+
 # test case 4:
+tweet = ""
+→ 140
+
 # test case 5:
+tweet = "hey @codedex_io what's tomorrow's challenge?"
+→ 87

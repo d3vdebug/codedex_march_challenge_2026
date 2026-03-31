@@ -1,5 +1,14 @@
-# test case 1:
-# test case 2:
-# test case 3:
-# test case 4:
-# test case 5:
+# test case 1: "https://codedex.io"
+→ valid
+
+# test case 2: "https://netflixcom"
+→ invalid
+
+# test case 3: "http://en.wikipedia.org"
+→ valid
+
+# test case 4: "https://www.jackieis.online"
+→ valid
+
+# test case 5: "ftp://napster.com"
+→ invalid

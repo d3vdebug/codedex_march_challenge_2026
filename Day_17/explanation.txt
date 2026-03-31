@@ -1,7 +1,7 @@
 In this solution, I iterate through each voucher and its corresponding delay using their index to maintain the correct pairing. 
 
+I initialize best_rate to -1 so even edge cases like $0 vouchers are handled correctly. For each option, I first check if the delay is within my acceptable limit (max_wait). 
 
-I initialize best_rate to -1 so even edge cases like $0 vouchers are handled correctly. For each option, I first check if the delay is within my acceptable limit (max_wait). If it is, I calculate the value per hour (voucher / delay) and compare it with the current best rate. 
+If it is, I calculate the value per hour (voucher / delay) and compare it with the current best rate. Whenever I find a better ratio, I update both the best_rate and the index. 
 
-
-Whenever I find a better ratio, I update both the best_rate and the index. In the end, the function returns the index of the option that gives the highest value for time waited, or -1 if no valid option exists.
+In the end, the function returns the index of the option that gives the highest value for time waited, or -1 if no valid option exists.

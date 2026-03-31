@@ -1,5 +1,14 @@
-# test case 1:
-# test case 2:
-# test case 3:
-# test case 4:
-# test case 5:
+# test case 1: 200
+→ 1511.7
+
+# test case 2: 12
+→ 600.0
+
+# test case 3: 85.001
+→ 1281.7
+
+# test case 4: 0
+→ 0.0
+
+# test case 5: 800
+→ 2561.7

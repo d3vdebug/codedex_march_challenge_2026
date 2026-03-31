@@ -1,5 +1,36 @@
 # test case 1:
+[ 
+    ["@sonny", "One Battle After Another", "Michael B. Jordan", "Jessie Buckley", "Ryan Cooger"], 
+    ["@adorkababe", "F1", "Timothée Chalamet", "Jessie Buckley", "Josh Safdie"], 
+    ["@tylerwhit", "Sinners", "Michael B. Jordan", "Rose Byrne", "Paul Thomas Anderson"] 
+]
+→ @sonny
+
 # test case 2:
+[ 
+    ["Kalshi", "One Battle After Another", "Michael B. Jordan", "Jessie Buckley", "Paul Thomas Anderson"], 
+    ["Polymarket", "One Battle After Another", "Michael B. Jordan", "Jessie Buckley", "Paul Thomas Anderson"] 
+]
+→ Tie
+
 # test case 3:
+[ 
+    ["Rotten Tomatoes", "The Secret Agent", "Wagner Moura", "Renate Reinsve", "Kleber Mendonça Filho"], 
+    ["IMDb", "One Battle After Another", "Timothée Chalamet", "Jessie Buckley", "Chloé Zhao"] 
+]
+→ IMDb
+
 # test case 4:
+[ 
+    ["New York Times", "One Battle After Another", "Michael B. Jordan", "Jesse Buckley", "Ryan Cooger"], 
+    ["The Guardian", "Sinners", "Michael B. Jordan", "Jessie Buckley", "Paul Thomas Anderson"], 
+    ["Vanity Fair", "One Battle After Another", "Michael B. Jordan", "Jessie Buckley", "Paul Thomas Anderson"] 
+]
+→ Vanity Fair
+
 # test case 5:
+[ 
+    ["@noob123", "Anora", "Leonardo DiCaprio", "Teyana taylor", "Sean Baker"], 
+    ["@movietroll", "Marty Supremeeee", "McLovin", "Lisa Simpson", "Stanley Kubrick"] 
+]
+→ Tie

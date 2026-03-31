@@ -7,6 +7,9 @@ def calculate_descent(altitude):
     (12, 0, 20)
   ]
   
+  if altitude == 0:
+    return 0.0
+
   h = float(altitude)
   total_time = 0
 
