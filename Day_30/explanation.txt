@@ -1,0 +1,7 @@
+In this solution, I start by initializing two variables: max_streak to store the longest streak found so far, and tmp_streak to track the current ongoing streak. 
+
+Then, I iterate through each day in the progress list. If the day is marked '✅', I increment tmp_streak, meaning the streak continues. If I encounter a '❌', I reset tmp_streak to 0 since the streak is broken. 
+
+After each step, I update max_streak using max(max_streak, tmp_streak) to ensure I always keep the highest streak recorded.
+
+Finally, I return max_streak, which represents the longest consecutive run of completed days.
